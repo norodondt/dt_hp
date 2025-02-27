@@ -5,15 +5,19 @@ import Hero2 from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
 
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import BlogList from '~/components/blog/List.astro';
-import Pagination from '~/components/blog/Pagination.astro';
-import Headline from '~/components/blog/Headline.astro';
 
 const metadata = {
   title: 'Dennis Decodes Systems - Decoding Complex Systems into Simple Solutions',
+  description: 'Dennis Decodes Systems - Decoding Complex Systems into Simple Solutions',
+  keywords: 'personal development, AI, wealth',
+  author: 'Dennis Tröger',
+  ogTitle: 'I decode systems',
+  ogDescription: 'Dennis Decodes Systems - Decoding Complex Systems into Simple Solutions',
+  ogImage: 'assets/images/feature_images/image_11.png',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'I decode systems',
+  twitterDescription: 'Dennis Decodes Systems - Decoding Complex Systems into Simple Solutions',
+  twitterImage: 'assets/images/feature_images/image_11.png',
   ignoreTitleTemplate: true,
 };
 ---
@@ -30,7 +34,6 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:arrow-right',
       },
-      { text: 'Learn more', href: '#features' },
     ]}
     image={{ src: '~/assets/images/Dennis Troeger.png', alt: 'Dennis Tröger' }}
   >
