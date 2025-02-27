@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Note from '~/components/widgets/Note.astro';
+import Button from '~/components/ui/Button.astro';
 
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 
@@ -48,7 +49,7 @@ const metadata = {
         and profit.<br /><br />
         No fluff, just real lessons from my wins and wrecks to help you cut through chaos and thrive.
       </span>
-      <span class="block mb-1 sm:hidden font-bold">
+      <span class="block mb-0.5 sm:hidden font-bold">
         Hey, I'm Dennis—Ex-Molecular Biologist, SaaS Founder, Polymath Explorer.<br /><br />
         I decode systems—mindsets, money, and personal growth for you, AI for businesses at Histack—to unlock clarity, purpose,
         and profit.<br /><br />
@@ -64,4 +65,8 @@ const metadata = {
   <!-- Blog Roll ******************* -->
 
   <BlogLatestPosts />
+
+  <div class="flex justify-center mb-12">
+    <Button href="/blog" class="transition-transform duration-300 hover:scale-105">Read Blog</Button>
+  </div>
 </Layout>
