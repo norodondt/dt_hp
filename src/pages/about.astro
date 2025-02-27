@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Dennis',
 };
 ---
 
@@ -15,134 +15,72 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About Me"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/dennis troeger italy.jpg',
+      alt: 'Dennis Troeger - System Decoder',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
+      Hey, I'm <span class="text-accent dark:text-white highlight">Dennis </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      An ex-molecular biologist, SaaS founder, and polymath explorer who's spent 25 years decoding systems. From coding
+      at 13 to scaling events for 5,000 people, my journey has been a fascinating exploration of systems, innovation,
+      and growth.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
+  <!-- Content Widget **************** -->
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-8">
+    <div class="mb-10 md:mx-auto md:max-w-3xl text-center">
+      <p class="text-base leading-relaxed text-black dark:text-white">
+        I'm launching "Dennis Decodes Systems" on YouTube to share raw, real lessons on personal development, financial
+        freedom, marketing, and AI, helping polymaths, lost souls, and entrepreneurs find clarity, purpose, and profit.
+        Whether it's overcoming imposter syndrome, finding your purpose, unlocking wealth, or mastering online
+        marketing, I've got the scars (and wins) to guide you—no theory, just what I've lived.
+      </p>
+      <br />
+      <p class="text-base leading-relaxed text-black dark:text-white">
+        Beyond Histack, I'm building income through courses like "Decode Your Purpose" and coaching for those feeling
+        stuck, while exploring new trends (intuition, crypto, whatever sparks me) to keep my curious nature alive. I'm
+        also the "decoder for breakthroughs" in my circle—helping friends unlock their next big move with my
+        system-decoding lens.
+      </p>
+      <br />
+      <p class="text-base leading-relaxed text-black dark:text-white">
+        With a love for philosophy, personal growth, and piano, I'm not here to fit one niche—I'm here to help you live
+        free as a polymath too. Join me on YouTube, subscribe to my newsletter, or book a Histack consult—let's decode
+        systems together and build a community of 10k subscribers, one breakthrough at a time.
+      </p>
+    </div>
+  </div>
 
   <!-- Features3 Widget ************** -->
 
   <Features3
+    title="My Journey"
+    subtitle="A path of continuous learning, exploration, and system decoding across multiple disciplines. "
     columns={3}
-    isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: 'Tech Pioneer',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Started coding at 13, laying the foundation for a lifetime of technical innovation and system understanding.',
+        icon: 'tabler:code',
       },
       {
-        title: 'Blog',
+        title: 'Event Scaling',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'Scaled events to 5,000 attendees for personal development speakers, mastering large-scale operations.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Business',
+        title: 'Solace AI',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Solace AI provides immediate, empathetic mental health support as a companion for those waiting for therapy, supplementing existing sessions, or exploring help without committing to formal therapy.',
+        icon: 'tabler:rocket',
       },
     ]}
   />
@@ -150,30 +88,27 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
+    title="Current Ventures"
+    subtitle="Building multiple streams of value and impact through various initiatives."
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Histack',
+        description:
+          'Running Histack to decode AI and automation for businesses, helping them navigate the future of technology.',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Dennis Decodes Systems',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Launching a YouTube channel sharing real lessons on personal development, financial freedom, marketing, and AI.',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Coaching & Courses',
+        description: 'Offering "Decode Your Purpose" and personalized coaching for those seeking breakthrough moments.',
+      },
+      {
+        title: 'Solace AI',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'Solace AI provides immediate, empathetic mental health support as a companion for those waiting for therapy, supplementing existing sessions, or exploring help without committing to formal therapy.',
       },
     ]}
   />
@@ -181,25 +116,38 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+    title="Areas of Expertise"
+    columns={3}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'System Decoding',
+        description: 'Analyzing and optimizing complex systems across various domains',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'Business Strategy',
+        description: 'Marketing, automation, and strategic business development',
+        icon: 'tabler:chart-dots',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Personal Development',
+        description: 'Helping others overcome challenges and find their path',
+        icon: 'tabler:growth',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'AI & Technology',
+        description: 'Leveraging cutting-edge tech for business transformation',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Molecular Biology',
+        description: 'Scientific background bringing unique analytical perspective',
+        icon: 'tabler:dna',
+      },
+      {
+        title: 'Polymath Approach',
+        description: 'Connecting dots across disciplines for innovative solutions',
+        icon: 'tabler:puzzle',
       },
     ]}
   />
@@ -207,21 +155,28 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Let's Connect"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: 'YouTube',
+        description: 'Subscribe to Dennis Decodes Systems for raw, real lessons on business and life',
+        icon: 'tabler:brand-youtube',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        title: 'Newsletter',
+        description: 'Get insights and updates directly in your inbox',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Histack Consultation',
+        description: 'Book a session to decode your business systems',
+        icon: 'tabler:businessplan',
+      },
+      {
+        title: 'Personal Coaching',
+        description: 'One-on-one sessions for breakthrough moments',
+        icon: 'tabler:users',
       },
     ]}
   />
