@@ -1,0 +1,26 @@
+---
+import { Icon } from 'astro-icon/components';
+import { twMerge } from 'tailwind-merge';
+
+export interface Props {
+  title?: string;
+  content: string;
+  classes?: Record<string, string>;
+}
+
+const { title, content, classes = {} } = Astro.props;
+
+const { container: containerClass = '', title: titleClass = '', content: contentClass = '' } = classes;
+---
+
+<div class={twMerge('bg-blue-50 dark:bg-slate-800 rounded-lg p-6 my-4', containerClass)}>
+  <div class="flex items-start">
+    <Icon name="tabler:bulb" class="w-6 h-6 text-yellow-500 mt-1 flex-shrink-0" />
+    <div class="ml-4">
+      {title && <h4 class={twMerge('text-lg font-semibold mb-2', titleClass)}>{title}</h4>}
+      <div class={twMerge('text-gray-700 dark:text-gray-300', contentClass)}>
+        {content}
+      </div>
+    </div>
+  </div>
+</div>
