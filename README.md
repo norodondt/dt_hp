@@ -1,114 +1,101 @@
-# AstroWind Project
+# Systems Decoded - Personal Blog
 
-A modern web application built with Astro 5.0 and Tailwind CSS, providing a robust foundation for building fast, SEO-friendly websites.
+A modern, SEO-optimized blog built with Astro focusing on financial literacy, wealth building, and systems thinking.
 
-## 🚀 Tech Stack
+## Project Overview
 
-- **Framework:** Astro v5.3.1
-- **Styling:** Tailwind CSS v3.4.17
-- **Language:** TypeScript v5.7.3
-- **Node Version:** ^18.17.1 || ^20.3.0 || >= 21.0.0
+This project is a personal blog for Dennis Tröger, built with Astro and featuring a clean, modern design. The blog focuses on decoding complex systems into simple solutions, with content primarily about financial literacy, wealth building, personal development, and AI implementation.
 
-### Key Dependencies
+## Key Features
 
-- **UI/Styling:**
+- **Modern Design**: Clean, responsive layout with dark mode support
+- **Blog System**: Full-featured blog with categories, tags, and pagination
+- **SEO Optimization**: Complete metadata management including OpenGraph and Twitter cards
+- **Structured Data**: JSON-LD implementation for better search engine visibility
+- **Performance**: Built with Astro for optimal performance and minimal JavaScript
+- **Content Management**: MDX support for rich content creation
 
-  - @fontsource-variable/inter
-  - @tailwindcss/typography
-  - tailwind-merge
-
-- **SEO & Analytics:**
-
-  - @astrolib/analytics
-  - @astrolib/seo
-  - @astrojs/sitemap
-
-- **Content:**
-  - @astrojs/mdx
-  - astro-embed
-  - astro-icon
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
-├── assets/        # Static assets (images, fonts, etc.)
-├── components/    # Reusable UI components
-├── content/       # MDX and other content files
-├── data/         # Data files and configurations
-├── layouts/      # Page layouts and templates
-├── pages/        # Route pages
-└── utils/        # Utility functions and helpers
+├── assets/          # Static assets like images and styles
+├── components/      # Reusable UI components
+│   ├── blog/        # Blog-specific components
+│   ├── common/      # Common components like metadata, analytics
+│   ├── ui/          # UI components like buttons, cards
+│   └── widgets/     # Larger widget components
+├── content/         # Content configuration
+├── data/            # Blog posts and other content
+│   └── post/        # MDX blog posts
+├── layouts/         # Page layouts
+├── pages/           # Astro pages
+│   └── [...blog]/   # Blog routes with dynamic paths
+└── utils/           # Utility functions
+    ├── blog.ts      # Blog-related utilities
+    ├── jsonld.ts    # JSON-LD structured data utilities
+    ├── permalinks.ts # URL handling utilities
+    └── images.ts    # Image processing utilities
 ```
 
-## 🛠️ Configuration Files
+## JSON-LD Implementation
 
-- `astro.config.ts` - Astro configuration
-- `tailwind.config.js` - Tailwind CSS configuration
-- `tsconfig.json` - TypeScript configuration
-- `eslint.config.js` - ESLint rules
-- `.prettierrc.cjs` - Code formatting rules
+The project recently added JSON-LD structured data to improve SEO and search engine visibility. JSON-LD (JavaScript Object Notation for Linked Data) helps search engines better understand the content of the pages.
 
-## 🔧 Development Tools
+### Implementation Details
 
-- ESLint v9.18.0 for code linting
-- Prettier v3.4.2 for code formatting
-- Various optimization plugins:
-  - astro-compress
-  - sharp
-  - reading-time
+1. **Utility Functions**: Created in `src/utils/jsonld.ts` with three main functions:
+   - `createBlogPostJsonLd`: Generates structured data for individual blog posts
+   - `createBlogListingJsonLd`: Generates structured data for blog listing pages
+   - `createWebsiteJsonLd`: Generates structured data for the website/organization
 
-## 🚀 Getting Started
+2. **Integration Points**:
+   - Blog posts (`src/pages/[...blog]/index.astro`): Uses `BlogPosting` schema
+   - Blog listing (`src/pages/[...blog]/[...page].astro`): Uses `CollectionPage` schema
+   - Homepage (`src/pages/index.astro`): Uses `WebSite` schema
 
-1. **Prerequisites**
+3. **Schema Types Used**:
+   - `BlogPosting`: For individual blog articles
+   - `CollectionPage`: For blog listing pages
+   - `WebSite`: For the homepage
+   - `Organization`: For publisher information
+   - `Person`: For author information
 
-   - Node.js (version specified in engines)
-   - npm/yarn/pnpm
+## Blog Content
 
-2. **Installation**
+The blog contains articles primarily focused on:
+- Financial literacy and wealth building
+- Money management and investing
+- Personal development
+- Systems thinking
 
-   ```bash
-   npm install
-   ```
+Each blog post is written in MDX format with frontmatter containing metadata like title, excerpt, image, author, categories, and tags.
 
-3. **Development**
+## Development
 
-   ```bash
-   npm run dev
-   ```
+### Prerequisites
 
-4. **Build**
+- Node.js (v16+)
+- npm or yarn
 
-   ```bash
-   npm run build
-   ```
+### Setup
 
-5. **Preview**
-   ```bash
-   npm run preview
-   ```
+1. Clone the repository
+2. Install dependencies: `npm install` or `yarn`
+3. Run development server: `npm run dev` or `yarn dev`
 
-## 🧰 Available Scripts
+### Building
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run check` - Run all checks (astro, eslint, prettier)
-- `npm run fix` - Fix eslint and prettier issues
+- Build for production: `npm run build` or `yarn build`
+- Preview production build: `npm run preview` or `yarn preview`
 
-## 🔄 CI/CD
+## Deployment
 
-The project includes configuration files for:
+The project is configured for deployment on multiple platforms:
+- Vercel (vercel.json)
+- Netlify (netlify.toml)
+- Docker (Dockerfile and docker-compose.yml)
 
-- Docker (`Dockerfile`, `docker-compose.yml`)
-- Vercel (`vercel.json`)
-- Netlify (`netlify.toml`)
-- GitHub Actions (`.github/`)
+## License
 
-## 📝 License
-
-See [LICENSE.md](LICENSE.md) for details.
-
----
-
-For more detailed documentation and guides, please refer to the individual component and utility files within the project.
+See LICENSE.md file for details.
