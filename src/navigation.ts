@@ -20,7 +20,7 @@ export const headerData = {
       }
       
   ],
-  actions: [{ text: 'Visit LinkedIn', href: 'https://www.linkedin.com/in/dennistroeger/', target: '_blank' },{ text: 'Watch YouTube', href: 'https://www.youtube.com/@dennis_decodes_systems', target: '_blank', variant: 'primary' }],
+  actions: [{ text: 'Visit LinkedIn', href: 'https://www.linkedin.com/in/dennistroeger', target: '_blank' },{ text: 'Watch YouTube', href: 'https://www.youtube.com/@dennis_decodes_systems', target: '_blank', variant: 'primary' }],
   
 };
 
