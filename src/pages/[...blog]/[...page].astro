@@ -8,6 +8,8 @@ import Pagination from '~/components/blog/Pagination.astro';
 // import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import { getCanonical } from '~/utils/permalinks';
+import { createBlogListingJsonLd } from '~/utils/jsonld';
 
 export const prerender = true;
 
@@ -33,9 +35,16 @@ const metadata = {
     type: 'blog',
   },
 };
+
+// Create JSON-LD structured data for the blog listing
+const url = getCanonical(Astro.url.pathname);
+const jsonLd = createBlogListingJsonLd(page.data, url.toString());
 ---
 
 <Layout metadata={metadata}>
+  <!-- Add JSON-LD structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline subtitle="My passion is to decode complex systems into simple solutions."> Systems Decoded </Headline>
     <BlogList posts={page.data} />

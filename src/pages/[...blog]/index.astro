@@ -11,6 +11,7 @@ import InfoBox from '~/components/ui/InfoBox.astro';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { getStaticPathsBlogPost, blogPostRobots } from '~/utils/blog';
 import { findImage } from '~/utils/images';
+import { createBlogPostJsonLd } from '~/utils/jsonld';
 import type { MetaData } from '~/types';
 import RelatedPosts from '~/components/blog/RelatedPosts.astro';
 
@@ -44,9 +45,15 @@ const metadata = merge(
   },
   { ...(post?.metadata ? { ...post.metadata, canonical: post.metadata?.canonical || url } : {}) }
 ) as MetaData;
+
+// Create JSON-LD structured data for the blog post
+const jsonLd = createBlogPostJsonLd(post, url.toString(), image);
 ---
 
 <Layout metadata={metadata}>
+  <!-- Add JSON-LD structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <SinglePost post={{ ...post, image: image }} url={url}>
     {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
     <InfoBox

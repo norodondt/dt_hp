@@ -6,6 +6,8 @@ import Note from '~/components/widgets/Note.astro';
 import Button from '~/components/ui/Button.astro';
 
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getCanonical } from '~/utils/permalinks';
+import { createWebsiteJsonLd } from '~/utils/jsonld';
 
 const metadata = {
   title: 'Dennis Decodes Systems',
@@ -25,9 +27,16 @@ const metadata = {
   twitterImage: 'assets/images/feature_images/image_11.png',
   ignoreTitleTemplate: true,
 };
+
+// Create JSON-LD structured data for the website
+const url = getCanonical(Astro.url.pathname);
+const jsonLd = createWebsiteJsonLd(url.toString(), 'Dennis Tröger - Systems Decoded', metadata.description);
 ---
 
 <Layout metadata={metadata}>
+  <!-- Add JSON-LD structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <!-- Hero Widget ******************* -->
 
   <Hero2
