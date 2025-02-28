@@ -1,8 +1,12 @@
 ---
-publishDate: 2023-01-02T00:00:00Z
-title: Markdown elements demo post
-excerpt: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor.
+title: 'Markdown elements demo post'
+slug: 'markdown-elements-demo-post'
+excerpt: 'Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor.'
 image: ~/assets/images/feature_images/image_6.png
+publishDate: 2025-01-02
+author: Dennis Tröger
+categories:
+  - blog
 tags:
   - markdown
   - blog
@@ -12,6 +16,7 @@ tags:
 import Logo from '~/components/Logo.astro';
 import { YouTube, Tweet, Vimeo } from 'astro-embed';
 import { Image } from 'astro:assets';
+import InfoBox from '~/components/ui/InfoBox.astro';
 import featureImage from '~/assets/images/feature_images/image_6.png';
 
 <Image src={featureImage} alt="Feature image" />
@@ -161,6 +166,12 @@ Ex amet id ex aliquip id do laborum excepteur exercitation elit sint commodo occ
 ## <a name="Inline"></a>Inline elements
 
 Sint ea anim ipsum ad commodo cupidatat do **exercitation** incididunt et minim ad labore sunt. Minim deserunt labore laboris velit nulla incididunt ipsum nulla. Ullamco ad laborum ea qui et anim in laboris exercitation tempor sit officia laborum reprehenderit culpa velit quis. **Consequat commodo** reprehenderit duis [irure](#!) esse esse exercitation minim enim Lorem dolore duis irure. Nisi Lorem reprehenderit ea amet excepteur dolor excepteur magna labore proident voluptate ipsum. Reprehenderit ex esse deserunt aliqua ea officia mollit Lorem nulla magna enim. Et ad ipsum labore enim ipsum **cupidatat consequat**. Commodo non ea cupidatat magna deserunt dolore ipsum velit nulla elit veniam nulla eiusmod proident officia.
+
+<InfoBox
+  type="info"
+  title="Styling Elements"
+  content="This demo post showcases various Markdown elements and how they are styled in this theme."
+/>
 
 _Proident sit veniam in est proident officia adipisicing_ ea tempor cillum non cillum velit deserunt. Voluptate laborum incididunt sit consectetur Lorem irure incididunt voluptate nostrud. Commodo ut eiusmod tempor cupidatat esse enim minim ex anim consequat. Mollit sint culpa qui laboris quis consectetur ad sint esse. Amet anim anim minim ullamco et duis non irure. Sit tempor adipisicing ea laboris `culpa ex duis sint` anim aute reprehenderit id eu ea. Aute [excepteur proident](#!) Lorem minim adipisicing nostrud mollit ad ut voluptate do nulla esse occaecat aliqua sint anim.
 
