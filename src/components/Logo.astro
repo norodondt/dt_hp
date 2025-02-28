@@ -1,10 +1,12 @@
 ---
 import { SITE } from 'astrowind:config';
 import image from '../assets/images/logo.png';
+import imageDark from '../assets/images/logo_invert.png';
 ---
 
 <span
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  <img src={image.src} alt="Dennis Tröger" width="200" />
+  <img src={image.src} alt="Dennis Tröger" width="200" class="block dark:hidden" />
+  <img src={imageDark.src} alt="Dennis Tröger" width="200" class="hidden dark:block" />
 </span>

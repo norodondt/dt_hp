@@ -60,13 +60,23 @@ const metadata = {
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <Note title="My Philosophy">
+    <p>The world is a complex place, and I decode it into simple solutions.</p>
+  </Note>
 
   <!-- Blog Roll ******************* -->
 
-  <BlogLatestPosts />
+  <BlogLatestPosts
+    id="blog"
+    title="Explore my insightful articles on my blog"
+    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
 
-  <div class="flex justify-center mb-12">
+  <div class="flex justify-center mb-12 mt-12">
     <Button href="/blog" class="transition-transform duration-300 hover:scale-105">Read Blog</Button>
   </div>
 </Layout>

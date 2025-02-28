@@ -1,0 +1,39 @@
+---
+description: Use this rule when I ask you to created MDX file
+globs: .mdx
+alwaysApply: false
+---
+
+# Rules
+1. When asked to format an MDX file, make sure you use ALL the content provided.
+2. Never delete content. 
+3. Search for Astro components that might fit the blog article and add them
+
+4. For the header use the following settings:
+
+  slug: chose a short one SEO friendly
+  publishDate: insert with placeholder 25-
+  title: chose a smart short one SEO friendly
+  excerpt?: maximum 200 letters
+  image?: ImageMetadata | string;
+  category?: Taxonomy;
+  tags?: Taxonomy[];
+  author?: Dennis Tröger
+
+
+  ## Example stick close to it
+  ---
+title: '5 Money Habits That Keep You Poor (Even With a High Income)'
+slug: '5-money-habits-that-keep-you-poor-even-with-a-high-income'
+excerpt: 'Discover why high earners still struggle financially. Learn the surprising habits that prevent wealth building and how to break free from the paycheck-to-paycheck cycle.'
+image: ~/assets/images/feature_images/image_15.png
+publishDate: 2025-03-01
+author: Dennis Tröger
+categories:
+  - Test
+tags:
+  - test
+---
+
+5. never rewrite my text only add elements and format it nicely
+6. No emojis, only if used in the source

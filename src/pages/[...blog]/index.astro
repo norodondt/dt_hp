@@ -6,6 +6,7 @@ import type { ImageMetadata } from 'astro';
 import Layout from '~/layouts/PageLayout.astro';
 import SinglePost from '~/components/blog/SinglePost.astro';
 import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+import InfoBox from '~/components/ui/InfoBox.astro';
 
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { getStaticPathsBlogPost, blogPostRobots } from '~/utils/blog';
@@ -48,7 +49,11 @@ const metadata = merge(
 <Layout metadata={metadata}>
   <SinglePost post={{ ...post, image: image }} url={url}>
     {post.Content ? <post.Content /> : <Fragment set:html={post.content || ''} />}
+    <InfoBox
+      content="Disclaimer: This article is based on personal experience and should not be considered financial advice. Always consult with a qualified financial advisor before making investment decisions."
+    />
   </SinglePost>
+
   <ToBlogLink />
 
   <RelatedPosts post={post} />

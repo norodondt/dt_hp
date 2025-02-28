@@ -1,26 +1,71 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { twMerge } from 'tailwind-merge';
 
-export interface Props {
+interface Props {
   title?: string;
   content: string;
-  classes?: Record<string, string>;
+  type?: 'info' | 'warning' | 'success';
 }
 
-const { title, content, classes = {} } = Astro.props;
+const { title, content, type = 'info' } = Astro.props;
 
-const { container: containerClass = '', title: titleClass = '', content: contentClass = '' } = classes;
+const typeConfig = {
+  info: {
+    icon: 'tabler:info-circle',
+    color: 'bg-blue-50 border-blue-200',
+    iconColor: 'text-blue-600',
+    textColor: 'text-blue-800',
+  },
+  warning: {
+    icon: 'tabler:alert-triangle',
+    color: 'bg-yellow-50 border-yellow-200',
+    iconColor: 'text-yellow-600',
+    textColor: 'text-yellow-800',
+  },
+  success: {
+    icon: 'tabler:circle-check',
+    color: 'bg-green-50 border-green-200',
+    iconColor: 'text-green-600',
+    textColor: 'text-green-800',
+  },
+};
+
+const config = typeConfig[type];
 ---
 
-<div class={twMerge('bg-blue-50 dark:bg-slate-800 rounded-lg p-6 my-4', containerClass)}>
-  <div class="flex items-start">
-    <Icon name="tabler:bulb" class="w-6 h-6 text-yellow-500 mt-1 flex-shrink-0" />
-    <div class="ml-4">
-      {title && <h4 class={twMerge('text-lg font-semibold mb-2', titleClass)}>{title}</h4>}
-      <div class={twMerge('text-gray-700 dark:text-gray-300', contentClass)}>
-        {content}
-      </div>
-    </div>
+<div class={`p-4 rounded-lg border ${config.color} flex gap-3`}>
+  <div class={`flex-shrink-0 ${config.iconColor}`}>
+    <Icon name={config.icon} class="w-6 h-6 mt-0.5" />
+  </div>
+  <div class="flex-grow">
+    {title && <div class={`text-base font-semibold mb-1 ${config.textColor}`}>{title}</div>}
+    <div class={`text-sm ${config.textColor} prose prose-sm max-w-none`} set:html={content} />
   </div>
 </div>
+
+<style is:global>
+  .prose table {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+  }
+  .prose thead {
+    border-bottom-width: 1px;
+    border-bottom-color: currentColor;
+  }
+  .prose th {
+    padding: 0.5rem 0.75rem;
+  }
+  .prose td {
+    padding: 0.5rem 0.75rem;
+  }
+  .prose tr {
+    border-bottom-width: 1px;
+    border-bottom-color: currentColor;
+    border-bottom-style: solid;
+  }
+  .prose tr:last-child {
+    border-bottom: none;
+  }
+</style>
