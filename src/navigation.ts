@@ -13,6 +13,10 @@ export const headerData = {
       {
         text: 'Blog',
         href: "/blog"
+      },
+      {
+        text: 'Tools',
+        href: "/tools"
       }
       
   ],

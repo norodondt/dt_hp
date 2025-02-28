@@ -8,7 +8,10 @@ status: 'published'
 visibility: 'public'
 ---
 
-# The Best Ways to Save Money in 2025
+import { Icon } from 'astro-icon/components';
+
+import InfoBox from '~/components/ui/InfoBox.astro';
+import Timeline from '~/components/ui/Timeline.astro';
 
 Having trouble saving money? You're not alone. 1 in 3 Americans have more credit card debt than savings. Why is that? How come so many people struggle to put money aside?
 
@@ -24,7 +27,7 @@ In 2016, I was broke. After quitting my job in 2015, I started a company with a 
 
 A friend asked how to promote his personal training business. I shared my knowledge of homepages, landing pages, email marketing, and Facebook Ads. After our three-hour dinner, my friend said one simple sentence that changed my life:
 
-> "This is amazing. Why again aren't you taking money for this?"
+<InfoBox type="info" content="This is amazing Why again not taking money for this?" />
 
 That was when I realized I had a valuable skill. So, I decided to become a self-employed digital marketing advisor. After my first project, I vowed never to experience that again, so I pledged to save money.
 
@@ -42,7 +45,11 @@ By creating a financial buffer, you are gaining freedom. When you have enough mo
 
 ### 2. Better Retirement Planning
 
-I am from Germany, and we have a good social security net, but I don't trust it. This system was created when few lived past 70. Today, with life expectancy at 87, we're discussing if retirement at 64 is reasonable.
+<InfoBox
+  type="warning"
+  title="Retirement Reality Check"
+  content="I am from Germany, and we have a good social security net, but I don't trust it. This system was created when few lived past 70. Today, with life expectancy at 87, we're discussing if retirement at 64 is reasonable."
+/>
 
 Two things will likely happen:
 
@@ -59,38 +66,25 @@ By creating a financial buffer, you are gaining freedom. When you have enough mo
 
 While financial freedom today is vital, planning for the future is just as important.
 
-It's nicer to be old with money
-
-I am from Germany, and we have a good social security net, but I don't trust it. This system was created when few lived past 70.
-
-People usually received 3-5 years of retirement payments, maybe 10 if lucky. Today we discuss if retirement at 64 is reasonable given a life expectancy of 87.
-
-And that, while the number of payers (workforce) declines rapidly. You don't need to be a magician to know that two things will happen (or both):
-
-- We have to pay more for retirement.
-- You will receive less for your retirement.﻿
-
-Prepare smartly for yourself; your dignity depends on planning.
-
-Saving money makes dreams come true
+## Saving money makes dreams come true
 
 Are you familiar with the marshmallow experiment? Five-year-olds were asked to resist a marshmallow. If successful, they would get a second one.
 
-tThe same is true for saving money: That's your marshmallow today. Spending money on those fancy gadgets? Getting drunk with friends? Spending money on that thing you "deserve"?
+The same is true for saving money: That's your marshmallow today. Spending money on those fancy gadgets? Getting drunk with friends? Spending money on that thing you "deserve"?
 
 Instant gratification, like "Amazon same-day delivery," exemplifies poor money management. Learn to delay it to surpass your peers.
 
 This is beneficial not just for you, but also for your loved ones. You can be the friend, parent, or spouse who provides and takes responsibility. Nothing feels worse than a parent who can't ensure a good life for their loved ones.
 
-Saving money prepares for negative events
-
-Nobody knows what's going to happen next. Are we on the brink of a new Covid-19? Will there be another economic downturn? Will you get sick? Burnout?
-
-We don't know. That's why saving money is equal to a piece of mind. That's where it all boils down. Money is a resource; the better you can manage it, the better your life will be.
+<InfoBox
+  type="success"
+  title="Peace of Mind"
+  content="Saving money prepares you for negative events. Nobody knows what's going to happen next. Are we on the brink of a new Covid-19? Will there be another economic downturn? Will you get sick? Burnout? We don't know. That's why saving money equals peace of mind."
+/>
 
 Saving money isn't just about numbers—it's also about mindset.
 
-What do you think about money - Your Money Mindset
+## What do you think about money - Your Money Mindset
 
 Money is delicate: Without it, we may feel like failures. With it, we might feel guilty. Money amplifies our existing beliefs, for better or worse. Thus, it's essential to examine our beliefs.
 
@@ -104,31 +98,52 @@ Money's role in our lives is significant, as we live in a capitalist system wher
 
 Before losing myself over money—worth an article on its own—let's focus on you. I have a little exercise for you. Find more about the money mindset here.
 
-Your Money Thoughts
+### Your Money Thoughts: A simple exercise to understand your relationship with money
 
-1.  Take a pen and paper or use an online text editor.
-2.  Write down what you think about for 5-10 minutes. What do you think of people who have a lot? What do you think of people who don't have it? Do you deserve to have money?
-3.  Now it's time to rethink: Take 5-10 minutes and write down what you WANT to think about money. How do you want to think about it right now? Ensure you write down at one point: "I deserve to have money."
+<Timeline
+  items={[
+    {
+      title: 'Step 1',
+      description: 'Take a pen and paper or use an online text editor.',
+      icon: 'tabler:pencil',
+    },
+    {
+      title: 'Step 2',
+      description:
+        "Write down what you think about money for 5-10 minutes. What do you think of people who have a lot? What do you think of people who don't have it? Do you deserve to have money?",
+      icon: 'tabler:writing',
+    },
+    {
+      title: 'Step 3',
+      description:
+        'Now it\'s time to rethink: Take 5-10 minutes and write down what you WANT to think about money. How do you want to think about it right now? Ensure you write down at one point: "I deserve to have money."',
+      icon: 'tabler:bulb',
+    },
+  ]}
+  classes={{
+    title: 'mt-0',
+    panel: 'items-start',
+    icon: 'mt-5',
+  }}
+/>
 
 This won't immediately change your view of money, but this exercise is powerful. If you think money is bad, why would it come to you? Believing money is bad causes avoidance, leading to unhappiness and poverty — a state I'd prefer to avoid.
 
-"I'd rather be rich and miserable than poor and miserable" - Unknown
+<InfoBox type="info" content="I'd rather be rich and miserable than poor and miserable - Unknown" />
 
-When should I consider saving money?
+## When should I consider saving money?
 
 In short? Immediately. Don't waste time until the next month. Don't wait until you get the next raise. Otherwise, it's like a New Year resolution, and we all know too well how that ends.
 
 The following steps help you to decide where you are and what you should do next:
 
-Get Your Life in Order
-
-Take control of your finances today:
+### Get Your Life in Order: Take control of your finances today
 
 - Track Income and Expenses: Know where your money is going.
 - Pay for Necessities: Focus on rent/mortgage, food, utilities, transportation, and healthcare.
-- Do It Online: Visit canvas.dennistroeger.com to manage your budget—it takes 15 minutes! ﻿
+- Do It Online: Visit canvas.dennistroeger.com to manage your budget—it takes 15 minutes!
 
-Build an Emergency Fund
+### Build an Emergency Fund
 
 Be prepared for unexpected expenses:
 
@@ -136,50 +151,53 @@ Be prepared for unexpected expenses:
 - Starter Goal: Save $1,000 or one month's expenses.
 - Long-Term Goal: Grow it to cover 3-6 months of living costs.
 
-Maximize Employer Benefits
+### Maximize Employer Benefits
 
 - 401(k) Contributions: Contribute enough to get the full employer match—it's free money!
 
-Pay Off Debt
+### Pay Off Debt
 
-- Tackle high-interest debt using the Avalanche (highest first) or Snowball (smallest first) method, focusing on debts above 5%, especially over 10%.
+<InfoBox
+  type="warning"
+  content="Tackle high-interest debt using the Avalanche (highest first) or Snowball (smallest first) method, focusing on debts above 5%, especially over 10%."
+/>
 
-Increase Retirement Savings
+### Increase Retirement Savings
 
-- Aim for 15%: Save at least 15% of your pre-tax income in retirement accounts like 401(k)s and IRAs.﻿ ﻿
+- Aim for 15%: Save at least 15% of your pre-tax income in retirement accounts like 401(k)s and IRAs.
 
-Plan for Future Goals
+### Plan for Future Goals
 
 - Big Expenses: Start funding future needs like education, a new car, or a home.
 - Health Savings Account (HSA): Max out if eligible.
-- College Savings: Contribute to your kids' education if desired.﻿ ﻿
+- College Savings: Contribute to your kids' education if desired.
 
-Invest and Plan for the Future
+### Invest and Plan for the Future
 
 - Beyond Retirement: Use taxable investment accounts for long-term goals.
-- Personal Priorities: Balance savings based on your values.﻿ ﻿
+- Personal Priorities: Balance savings based on your values.
 
 Once you've laid the groundwork, it's time to explore techniques that make saving simpler.
 
-3 Ways to Save More Money
+## 3 Ways to Save More Money
 
-#1 Save at the beginning of the month
+### #1 Save at the beginning of the month
 
 Saving money is difficult. Our brains struggle against cheap dopamine or instant gratification. Survival instincts don't plan for retirement. Planning was irrelevant in the Stone Age.
 
-💡Read more about when spending is completly fine here.
+<InfoBox type="info" content="💡Read more about when spending is completely fine here." />
 
 To simplify, set up monthly payments to your savings account right after receiving your paycheck. Discuss options with your employer. A 401k could also be beneficial.
 
-#2 Earn more
+### #2 Earn more
 
-"How can I earn more?" I understand; you've likely pondered this. Yet, this question is flawed as it centers solely on you. It neglects the role of others. Concepts like IKIGAI (https://en.wikipedia.org/wiki/Ikigai) can shift your focus outward.
+"How can I earn more?" I understand; you've likely pondered this. Yet, this question is flawed as it centers solely on you. It neglects the role of others. Concepts like IKIGAI can shift your focus outward.
 
 Before diving into complex models, ask: What can I offer? If you feel stuck, consult a friend, spouse, or co-worker about your strengths.
 
 I write because a friend said, "Nobody helped me with personal finance as you do. You should help others, too!". The question "How can I earn more money?" never leads to an answer.
 
-#3 Best budgeting apps for beginners to save money
+### #3 Best budgeting apps for beginners to save money
 
 We all have unnecessary expenses. I could save $500 a month if I stopped buying books I don't read! While I don't want to call books "unnecessary," it's an area where I could be more mindful.
 
@@ -187,121 +205,97 @@ Additionally, I'm sure some expenses can be reduced or eliminated. "But, Dennis,
 
 What benefited me was utilizing "Finanzguru" (Finance Guru), a German budgeting app.
 
-"But I don't want to track all my expenses. That's exhausting!"
+<InfoBox
+  type="warning"
+  title="Tracking Tip"
+  content="But I don't want to track all my expenses. That's exhausting! - Start by tracking one day, then a week, and maybe a month. This will show where your money goes in a typical month. We can only change what we can measure—this applies to everyone, not just managers."
+/>
 
-Start by tracking one day, then a week, and maybe a month. This will show where your money goes in a typical month. We can only change what we can measure—this applies to everyone, not just managers.
+<InfoBox
+  type="info"
+  content="💡Are you financially literate? If not it can cost you up to $1,000 a year - read more here"
+/>
 
-💡Are you financial literate? If not it can cost you up to $1,000 a year - read more here
+### List of apps you can use
 
-List of apps you can use:﻿ ﻿
+<Timeline
+  items={[
+    {
+      title: 'Rocket Money',
+      description:
+        'Rocket Money, formerly Truebill, excels in personal finance management. Key features include subscription management, bill negotiation services, budgeting, net worth tracking, and automated savings features. The app offers premium services on a pay-what-you-want basis, from $4 to $12 monthly.',
+      icon: 'tabler:rocket',
+    },
+    {
+      title: 'You Need a Budget (YNAB)',
+      description:
+        'YNAB is ideal for those who prefer a hands-on approach to budgeting. It offers zero-based budgeting method, flexible, in-depth transaction tracking, and educational content on personal finance. YNAB is priced at $14.99 per month or $99 annually.',
+      icon: 'tabler:calculator',
+    },
+    {
+      title: 'Simplifi by Quicken',
+      description:
+        'Simplifi is designed for users seeking a straightforward yet effective budgeting tool. It provides intuitive dashboard for financial overview, flexible budgeting tools, excellent transaction management, and savings goal tracking. Simplifi is available for $5.99 per month or $71.88 when billed annually.',
+      icon: 'tabler:chart-pie',
+    },
+    {
+      title: 'PocketGuard',
+      description:
+        'PocketGuard is ideal for newcomers to personal finance apps or those overwhelmed by complex features. It offers user-friendly interface, creative design for easy navigation, comprehensive budgeting tools, and great support resources. The app offers a free version and a premium subscription for extra features.',
+      icon: 'tabler:shield',
+    },
+    {
+      title: 'Monarch Money',
+      description:
+        'Monarch Money suits detail-oriented users who are managing many family finances. Features include visually appealing and customizable interface, comprehensive account linking (bank, investment, property), net worth tracking over time, and collaborative features for family finance management. Monarch charges $14.99 per month or $99.99 annually, with a one-week free trial.',
+      icon: 'tabler:crown',
+    },
+  ]}
+  classes={{
+    title: 'mt-0',
+    panel: 'items-start',
+    icon: 'mt-5',
+  }}
+/>
 
-Rocket Money
-
-Rocket Money, formerly Truebill, excels in personal finance management. Key features include:
-
-﻿- Subscription management and bill negotiation services
-
-- Budgeting and net worth tracking
-
-- Automated savings features
-
-- Credit score monitoring
-
-The app offers premium services on a pay-what-you-want basis, from $4 to $12 monthly.
-
-You Need a Budget (YNAB)﻿ ﻿
-
-YNAB is ideal for those who prefer a hands-on approach to budgeting. It offers:
-
-- Zero-based budgeting method
-
-- Flexible, in-depth transaction tracking
-
-- Educational content on personal finance
-
-- 34-day free trial
-
-YNAB is priced at $14.99 per month or $99 annually.
-
-Simplifi by Quicken
-
-Simplifi is designed for users seeking a straightforward yet effective budgeting tool. It provides:
-
-- Intuitive dashboard for financial overview
-
-- Flexible budgeting tools
-
-- Excellent transaction management
-
-- Savings goal tracking
-
-Simplifi is available for $5.99 per month or $71.88 when billed annually.
-
-PocketGuard
-
-PocketGuard is ideal for newcomers to personal finance apps or those overwhelmed by complex features. It offers:﻿ ﻿
-
-- User-friendly interface
-
-- Creative design for easy navigation
-
-- Comprehensive budgeting tools
-
-- Great support resources
-
-The app offers a free version and a premium subscription for extra features.﻿ ﻿
-
-Monarch Money
-
-Monarch Money suits detail-oriented users who are managing many family finances. Features include:﻿
-
-- Visually appealing and customizable interface
-
-- Comprehensive account linking (bank, investment, property)
-
-- Net worth tracking over time
-
-- Collaborative features for family finance management﻿ ﻿
-
-Monarch charges $14.99 per month or $99.99 annually, with a one-week free trial.
-
-Where should you save your money?
+## Where should you save your money?
 
 Your current stage matters. If savings are under $1,000, keep it in cash in a savings account, ideally for amounts up to $10,000 or six months' expenses. This offers flexibility for life's challenges.
 
 As a U.S. resident, consider a Roth IRA or 401k beneficial. Since these subjects deserve more attention, I'll keep it brief for now. A Roth IRA allows tax-free withdrawals, providing financial security for the future regulations.
 
-ETF - Exchange Traded Funds
+### ETF - Exchange Traded Funds
 
 These are like fruit baskets of stocks. By now, you've likely heard of ETFs. If not, check out great articles and videos (start here).
 
-It's crucial to select an ETF that is affordable. Here, affordable refers to a TER of less than 0.50%, which indicates the annual fees you pay for holding the ETF. This is how the ETF generates revenue. Aim for a TER below 0.30%, though this may vary investment.
+<InfoBox
+  type="info"
+  title="TER Tip"
+  content="It's crucial to select an ETF that is affordable. Here, affordable refers to a TER of less than 0.50%, which indicates the annual fees you pay for holding the ETF. This is how the ETF generates revenue. Aim for a TER below 0.30%, though this may vary by investment."
+/>
 
 "0,2% is a lot!" - Yes, and no. This roughly equals $200 on $100,000 savings a year. When you reach these numbers, $200 is part of the normal fluctuation. I see it differently, but I like my life easy and don't want to count every penny. More about finding the right ETF you can find here.
 
-Stocks
+### Stocks
 
 Ah, indeed... stocks. Why not bypass the middlemen and invest directly in stocks? The prospect of becoming a self-made millionaire is appealing. Even with a 60-hour work week, 96% of professional fund managers do not surpass ETF performance.
 
-Do you think you can do better? I encourage you to check my Wealth TriangleWhen, which shows how much to invest based on your risk profile.
+Do you think you can do better? I encourage you to check my Wealth Triangle, which shows how much to invest based on your risk profile.
+
+<a
+  href="/wealth-triangle"
+  class="inline-flex items-center justify-center rounded-full border-[#7A4EFF] border bg-[#7A4EFF] font-medium text-center text-base leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary"
+>
+  <span style="color: white !important;">Check the Wealth Triangle</span>
+  <Icon name="tabler:external-link" class="w-5 h-5 ml-1 -mr-1.5 rtl:mr-1 rtl:-ml-1.5 inline-block text-white" />
+</a>
 
 By now, you've seen the impact that mindful saving can have.
 
-Saving Money - A summary
+## Saving Money - A summary
 
 Saving money is vital for control and autonomy in life. It's a crucial skill that helps you be a happy human being. The number of people who live from paycheck to paycheck is staggering.
-
-And the worst part? It has nothing to do with how much you earn:
-
-- About 35% of households earning under $50,000 live paycheck to paycheck, up from 32% in 2019310.
-- Even higher-income brackets are affected: 20% of households earning over $150,000 a year live paycheck to paycheck.
-- 33% of workers earning between $50,000 and $79,999 annually say they're in this situation.
-- 36% of workers earning between $80,000 and $99,999 report living paycheck to paycheck.
-
-(Sources)
 
 Learning to manage money should start early. Happiness follows a rule: if you need money to be happy, it won't change.
 
 Start saving today. Don't wait. Future-You deserve it.
-
-Disclaimer: This article is based on personal experience and should not be considered financial advice. Always consult with a qualified financial advisor before making investment decisions.

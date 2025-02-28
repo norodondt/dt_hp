@@ -22,7 +22,7 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      Hey, I'm <span class="text-accent dark:text-white highlight">Dennis </span>
+      Hey, I'm <span class="text-accent dark:text-accent highlight">Dennis </span>
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -33,27 +33,30 @@ const metadata = {
   </Hero>
 
   <!-- Content Widget **************** -->
-  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-8">
-    <div class="mb-10 md:mx-auto md:max-w-3xl text-center">
-      <p class="text-base leading-relaxed text-black dark:text-white">
-        I'm launching "Dennis Decodes Systems" on YouTube to share raw, real lessons on personal development, financial
-        freedom, marketing, and AI, helping polymaths, lost souls, and entrepreneurs find clarity, purpose, and profit.
-        Whether it's overcoming imposter syndrome, finding your purpose, unlocking wealth, or mastering online
-        marketing, I've got the scars (and wins) to guide you—no theory, just what I've lived.
-      </p>
-      <br />
-      <p class="text-base leading-relaxed text-black dark:text-white">
-        Beyond Histack, I'm building income through courses like "Decode Your Purpose" and coaching for those feeling
-        stuck, while exploring new trends (intuition, crypto, whatever sparks me) to keep my curious nature alive. I'm
-        also the "decoder for breakthroughs" in my circle—helping friends unlock their next big move with my
-        system-decoding lens.
-      </p>
-      <br />
-      <p class="text-base leading-relaxed text-black dark:text-white">
-        With a love for philosophy, personal growth, and piano, I'm not here to fit one niche—I'm here to help you live
-        free as a polymath too. Join me on YouTube, subscribe to my newsletter, or book a Histack consult—let's decode
-        systems together and build a community of 10k subscribers, one breakthrough at a time.
-      </p>
+  <div class="relative">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-8">
+      <div class="mb-10 md:mx-auto md:max-w-3xl text-center">
+        <p class="text-base leading-relaxed text-black dark:text-white">
+          I'm launching "Dennis Decodes Systems" on YouTube to share raw, real lessons on personal development,
+          financial freedom, marketing, and AI, helping polymaths, lost souls, and entrepreneurs find clarity, purpose,
+          and profit. Whether it's overcoming imposter syndrome, finding your purpose, unlocking wealth, or mastering
+          online marketing, I've got the scars (and wins) to guide you—no theory, just what I've lived.
+        </p>
+        <br />
+        <p class="text-base leading-relaxed text-black dark:text-white">
+          Beyond Histack, I'm building income through courses like "Decode Your Purpose" and coaching for those feeling
+          stuck, while exploring new trends (intuition, crypto, whatever sparks me) to keep my curious nature alive. I'm
+          also the "decoder for breakthroughs" in my circle—helping friends unlock their next big move with my
+          system-decoding lens.
+        </p>
+        <br />
+        <p class="text-base leading-relaxed text-black dark:text-white">
+          With a love for philosophy, personal growth, and piano, I'm not here to fit one niche—I'm here to help you
+          live free as a polymath too. Join me on YouTube, subscribe to my newsletter, or book a Histack consult—let's
+          decode systems together and build a community of 10k subscribers, one breakthrough at a time.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -83,7 +86,11 @@ const metadata = {
         icon: 'tabler:rocket',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features3>
 
   <!-- Steps2 Widget ****************** -->
 
@@ -150,7 +157,11 @@ const metadata = {
         icon: 'tabler:puzzle',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
   <!-- Features2 Widget ************** -->
 
