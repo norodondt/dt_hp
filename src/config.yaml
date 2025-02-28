@@ -11,7 +11,7 @@ metadata:
   title:
     default: Dennis Decodes Systems
     template: '%s'
-  description: 'Dennis Decodes Systems - Decoding Complex Systems into Simple Solutions'
+  description: 'Decoding Complex Systems into Simple Solutions'
   robots:
     index: true
     follow: true
